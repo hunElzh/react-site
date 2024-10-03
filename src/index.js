@@ -12,8 +12,7 @@ if (rootElement) {
     root.render(
         <Suspense fallback={<Loading/>}>
             <React.StrictMode>
-                {/*<MainRouter/>*/}
-                <App/>
+                <MainRouter/>
             </React.StrictMode>
         </Suspense>
     );
