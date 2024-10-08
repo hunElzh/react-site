@@ -5,7 +5,7 @@ const Home = memo(() => {
     return (
         <div className={''}>
             <div>
-
+                hello
             </div>
         </div>
     )

@@ -3,9 +3,9 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {ConfigProvider, MappingAlgorithm, theme} from "antd";
 import React from 'react';
 
-const Home = lazy(() => import("../pages/home/index"));
-const SignIn = lazy(() => import("../pages/login/sign-in"));
-const SignUp = lazy(() => import("../pages/login/sign-up"));
+const Home = lazy(() => import("../pages/home/home"));
+const SignIn = lazy(() => import("../pages/login/sign-in/signIn"));
+const SignUp = lazy(() => import("../pages/login/sign-up/signUp"));
 
 const studioDarkAlgorithm: MappingAlgorithm = (seedToken, mapToken) => {
     // 使用 antd 默认的暗色算法生成基础token，这样其他不需要定制的部分则保持原样
@@ -25,18 +25,12 @@ const router = createBrowserRouter([
         element: <Home/>        // children:
     },
     {
-        path: '/login',
-        element: <SignUp/>,
-        children: [
-            {
-                path: '/login/signIn',
-                element: <SignIn/>
-            },
-            {
-                path: '/login/signUp',
-                element: <SignUp/>
-            }
-        ]
+        path: '/signIn',
+        element: <SignIn/>
+    },
+    {
+        path: '/signUp',
+        element: <SignUp/>
     }
 ])
 
