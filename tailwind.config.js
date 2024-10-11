@@ -16,5 +16,7 @@ module.exports = {
   corePlugins: {
     preflight: false, // 禁用tailwindcss默认的样式
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
