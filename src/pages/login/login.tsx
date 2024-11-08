@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Form, Input, Button, Checkbox } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import React, { useState } from "react";
+import { Form, Input, Button, Checkbox } from "antd";
+import { UserOutlined, LockOutlined } from "@ant-design/icons";
 
 const LoginPage = () => {
   const [rememberPassword, setRememberPassword] = useState(false);
 
   const onFinish = (values: any) => {
-    console.log('Received values of form:', values);
+    console.log("Received values of form:", values);
     // 在此处添加登录逻辑
   };
 
@@ -27,7 +27,7 @@ const LoginPage = () => {
             rules={[
               {
                 required: true,
-                message: '请输入您的用户名!',
+                message: "请输入您的用户名!",
               },
             ]}
           >
@@ -42,7 +42,7 @@ const LoginPage = () => {
             rules={[
               {
                 required: true,
-                message: '请输入您的密码!',
+                message: "请输入您的密码!",
               },
             ]}
           >
@@ -55,12 +55,18 @@ const LoginPage = () => {
           </Form.Item>
           <Form.Item>
             <Form.Item name="remember" valuePropName="checked" noStyle>
-              <Checkbox onChange={(e) => setRememberPassword(e.target.checked)}>记住密码</Checkbox>
+              <Checkbox onChange={(e) => setRememberPassword(e.target.checked)}>
+                记住密码
+              </Checkbox>
             </Form.Item>
           </Form.Item>
 
           <Form.Item>
-            <Button type="primary" htmlType="submit" className="w-full rounded-md">
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="w-full rounded-md"
+            >
               登录
             </Button>
           </Form.Item>
